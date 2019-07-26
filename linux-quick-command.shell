@@ -1,0 +1,12 @@
+##Clear definer database 
+sed -e 's/DEFINER=[^ ]* / /' database_with_definer.sql > new_db.sql
+
+##List IP addresses connected to port 80 :
+netstat -tn 2>/dev/null | grep ':80 ' | awk '{print $5}' |sed -e 's/::ffff://' | cut -f1 -d: | sort | uniq -c | sort -rn | head
+
+##Calculate how many concurrent user that connected to port 80 :
+netstat -tn 2>/dev/null | grep ':80 ' | awk '{print $5}' |sed -e 's/::ffff://' | cut -f1 -d: | sort | uniq -c | sort -rn | head | wc -l
+
+##To get number of concurrent user and update every two seconds, type this command :
+watch "netstat -tn 2>/dev/null | grep ':80 ' | awk '{print $5}' |sed -e 's/::ffff://' | cut -f1 -d: | sort | uniq -c | sort -rn | head | wc -l"
+

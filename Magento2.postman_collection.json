@@ -1,0 +1,30 @@
+{
+	"id": "9d98ef11-dd3f-0d36-eea0-16075d531ab0",
+	"name": "Magento 2",
+	"requests": [
+		{
+			"id": "26c111c6-e79a-910e-02cc-275863133e2b",
+			"headers": "",
+			"url": "http://magento2-ee.local/index.php/rest/V1/products/123",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "9d98ef11-dd3f-0d36-eea0-16075d531ab0",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://magento2-ee.local/index.php/rest/V1/products/123",
+			"description": "- Please change the base url to you domain\n- 123 is the product sku. please change to you sku",
+			"descriptionFormat": "html",
+			"time": 1465528475339,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	],
+	"order": [
+		"26c111c6-e79a-910e-02cc-275863133e2b"
+	],
+	"timestamp": 1465528475340
+}
